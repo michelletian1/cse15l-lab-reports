@@ -13,6 +13,7 @@
 * <img width="602" alt="Screen Shot 2023-01-12 at 4 29 11 PM" src="https://user-images.githubusercontent.com/82022298/212209578-4fef1629-631f-40e8-a1a2-ba938bd6834c.png">
 *First step you will have to go to terminal, if you use macbook press space bar and command to search terminal. then you type ssh and your credentials and your password*
 * <img width="613" alt="Screen Shot 2023-01-12 at 4 29 32 PM" src="https://user-images.githubusercontent.com/82022298/212210115-3bdd7829-b71a-4713-bbd0-fa34405cb887.png"><img width="604" alt="Screen Shot 2023-01-12 at 4 29 39 PM" src="https://user-images.githubusercontent.com/82022298/212210124-1b7a5b9c-1685-4274-9925-68f83a7aef0d.png">
+
 *if you do it correctly this should pop out from the terminal. And after that you could run some command.*
 
 ## Running some command
