@@ -1,6 +1,7 @@
 # Michelle Tian
-
-## CSE 15L portofolio 
 ---
 
-* Week 1 :
+Welcom to my portofolio, i'll link the lab report
+
+## The Lab Report
+* Week 1 : 
