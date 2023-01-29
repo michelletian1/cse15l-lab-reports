@@ -1,7 +1,9 @@
 # Michelle Tian
+# PID : A17183450
 ---
 
-Welcom to my portofolio, i'll link the lab report
+Hello, my name is Michelle Tian. This is my porfolio for CSE 15L.
 
 ## The Lab Report
-* Week 1 : [Lab-1](https://michelletian1.github.io/cse15l-lab-reports/lab-report1)
+* Week 1 : [Lab 1](https://michelletian1.github.io/cse15l-lab-reports/lab-report1)
+* Week 3 : [Lab 2]()
