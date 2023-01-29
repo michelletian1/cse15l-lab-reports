@@ -35,7 +35,7 @@ We see this error because there is no JUnit because the classpath is different f
 ### ArrayTest.java
 the code :
 
- `public class ArrayTests {
+ public class ArrayTests {
     @Test 
     public void testReverseInPlace() {
       int[] input1 = { 1,5,7 };
@@ -43,12 +43,13 @@ the code :
       assertArrayEquals(new int[]{ 7,5,1}, input1);`
       
     }
-`@Test
+    
+@Test
 public void testReversed() {
   int[] input3 = { 1, 5, 7};
   assertArrayEquals(new int[]{ 7,5,1}, ArrayExamples.reversed(input3));
 }
-}`
+}
 
 So from the code above we have a variable call Input1 where it contains array of numbers. Here, I input 1,5,7 as my numbers in my array. now we used a functions called reverseInPlace(Input1) meaning that in the assertArrayEquals we filled the new array as our old array but in the reverse order. Here, we don't notice any failure-inducing input. Same goes for the testReversed the idea is the same put numbers in array for variables input3 and we reversed the array numbers. Here I don't notice any failure-inducing input.
 
