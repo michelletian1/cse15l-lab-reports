@@ -34,7 +34,7 @@ We see this error because there is no JUnit because the classpath is different f
 
 ### ArrayTest.java
 the code :
-
+```
  public class ArrayTests { \n
     @Test 
     public void testReverseInPlace() {
@@ -42,7 +42,7 @@ the code :
       ArrayExamples.reverseInPlace(input1);
       assertArrayEquals(new int[]{ 7,5,1}, input1);  
     }
-    
+ ```   
 @Test
 public void testReversed() {
   int[] input3 = { 1, 5, 7};
