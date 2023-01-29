@@ -35,13 +35,12 @@ We see this error because there is no JUnit because the classpath is different f
 ### ArrayTest.java
 the code :
 
- public class ArrayTests {
+ public class ArrayTests { \n
     @Test 
     public void testReverseInPlace() {
       int[] input1 = { 1,5,7 };
       ArrayExamples.reverseInPlace(input1);
-      assertArrayEquals(new int[]{ 7,5,1}, input1);`
-      
+      assertArrayEquals(new int[]{ 7,5,1}, input1);  
     }
     
 @Test
