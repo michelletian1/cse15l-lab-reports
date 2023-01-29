@@ -27,7 +27,128 @@ How do the values of any relevant fields of the class change from this specific 
  
 ## Bugs 
 
-### Array 
+### Setup
+<img width="1027" alt="Screen Shot 2023-01-28 at 5 40 17 PM" src="https://user-images.githubusercontent.com/82022298/215299753-0549d606-c04b-4a98-9dc8-a904ae7b0914.png">
+
+We see this error because there is no JUnit because the classpath is different from windows to mac. 
+
+### ArrayTest.java
+the code :
+
+ `public class ArrayTests {
+    @Test 
+    public void testReverseInPlace() {
+      int[] input1 = { 1,5,7 };
+      ArrayExamples.reverseInPlace(input1);
+      assertArrayEquals(new int[]{ 7,5,1}, input1);`
+      
+    }
+`@Test
+public void testReversed() {
+  int[] input3 = { 1, 5, 7};
+  assertArrayEquals(new int[]{ 7,5,1}, ArrayExamples.reversed(input3));
+}
+}`
+
+So from the code above we have a variable call Input1 where it contains array of numbers. Here, I input 1,5,7 as my numbers in my array. now we used a functions called reverseInPlace(Input1) meaning that in the assertArrayEquals we filled the new array as our old array but in the reverse order. Here, we don't notice any failure-inducing input. Same goes for the testReversed the idea is the same put numbers in array for variables input3 and we reversed the array numbers. Here I don't notice any failure-inducing input.
+
+## Failure - Inducing input :
+### ArrayExamples.java
+the code :
+
+  `static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }`
+  
+   `static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }`
+
+From the code above we can see where the failure-induce input came to play. For the first methods the reverseInPlace we can see the failure because if the array only contains one number then the code works because it swap by nothing but its own number. However, if you put 2 numbers in the array it will cause an error because only one of them did the swapping while one of them stays in the same index. We want to be able to swap places for the numbers we wanted to swap.  For the reversed and averagewithoutlowest it is exactly the same failure as the reversedInPlace.
+
+## An input that doesn’t induce a failure :
+### ArrayExamples.java
+reverseInPlace code :
+  `static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) { 
+      int num = arr[i];
+      arr[i] = arr[arr.length - i - 1]; 
+      arr[arr.length - i - 1] = num;
+    }
+  } `
+  
+reversed :
+  `static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[i];
+    }
+    for (int i = 0; i < arr.length; i += 1){
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }`
+  
+testaverageWithoutLowest : 
+  `@Test
+  public void testaverageWithoutLowest() {
+    double[] input5 = {1, 5, 7, 3, 7 };
+    assertEquals((double)3, ArrayExamples.averageWithoutLowest(input5), 0.001);
+  }`
+
+## Symptomps
+<img width="1204" alt="Screen Shot 2023-01-28 at 9 19 07 PM" src="https://user-images.githubusercontent.com/82022298/215306638-88512558-200d-4646-90e5-525a4acd23d1.png">
+<img width="1113" alt="Screen Shot 2023-01-28 at 9 20 38 PM" src="https://user-images.githubusercontent.com/82022298/215306672-afd169e2-5df9-4182-9842-cb0ee2a7ef2f.png">
+
+
+## Code before:
+### ArrayExamples.java
+  
+  `static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }`
+  
+   `static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }`
+  
+## Code After :
+reverseInPlace code :
+  `static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) { 
+      int num = arr[i];
+      arr[i] = arr[arr.length - i - 1]; 
+      arr[arr.length - i - 1] = num;
+    }
+  } `
+  
+reversed :
+  `static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[i];
+    }
+    for (int i = 0; i < arr.length; i += 1){
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }`
+
+
+
+
 
 ---
 ## Name : Michelle Tian
