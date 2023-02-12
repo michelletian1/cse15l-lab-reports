@@ -14,7 +14,7 @@ What does -c do? It only a count of selected lines is written to standard output
 
 What does -r do? Recursively search subdirectories listed (i.e., force grep to behave as rgrep). In the code I'm doing grep -r "believed" written_2/ meaning I want grab all the files containing the words believed withing the directory of written_2/. After that I want to show you the word "believed" together with the text.
 
-..* grep -r -l "string" directory :
+- grep -r -l "string" directory :
 <img width="1001" alt="Screen Shot 2023-02-10 at 2 57 32 PM" src="https://user-images.githubusercontent.com/82022298/218287989-1bb27af2-596f-4e56-af2d-f4ffbba40209.png">
 
 So, above we learned what is -r means and how do we used it. What is -l? Only the names of files containing selected lines are written to standard output.  grep will only search a file until a match has been found, making searches potentially less expensive. Pathnames are listed once per file searched. If the standard input is searched, the string “(standard input)” is written unless a --label is specified. So, on the code grep -r -l "believed" written_2/ will show instead of the text it will show the directories on which the files contain the word "believed".
