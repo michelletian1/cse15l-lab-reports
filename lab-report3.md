@@ -7,14 +7,17 @@ For this lab I have chosen the "grep" command to explain.
 
 ## grep -c  : 
 <img width="920" alt="Screen Shot 2023-02-10 at 2 59 27 PM" src="https://user-images.githubusercontent.com/82022298/218287531-4d5ae38e-6c0a-4d72-b4d3-811bc295ef88.png">
-What grep -c do, 
+What does -c do? It only a count of selected lines is written to standard output. So, in the code I'm doing grep -c "believed" written_2/... meaning, I want to grep the words believe in the written_2/ specific directories. After that the -c will count how many believed words contain in the text files. So, here in the files of Bali-WhereToGo.txt, the text contains 7 words of believed.
 
 ## grep -r "string" directory :
 <img width="1447" alt="Screen Shot 2023-02-10 at 2 56 54 PM" src="https://user-images.githubusercontent.com/82022298/218287906-cee9ef12-a843-4210-8215-f8bca7eb5a29.png">
 
+What does -r do? Recursively search subdirectories listed (i.e., force grep to behave as rgrep). In the code I'm doing grep -r "believed" written_2/ meaning I want grab all the files containing the words believed withing the directory of written_2/. After that I want to show you the word "believed" together with the text.
+
 ## grep -r -l "string" directory :
 <img width="1001" alt="Screen Shot 2023-02-10 at 2 57 32 PM" src="https://user-images.githubusercontent.com/82022298/218287989-1bb27af2-596f-4e56-af2d-f4ffbba40209.png">
 
+So, above we learned what is -r means and how do we used it. 
 ## grep "string" directory :
 <img width="1044" alt="Screen Shot 2023-02-10 at 3 04 43 PM" src="https://user-images.githubusercontent.com/82022298/218288000-7955c1bc-c547-45ef-b2e6-54b3e5c00849.png">
 
