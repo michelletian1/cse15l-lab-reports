@@ -35,7 +35,7 @@ grep "string" directory usually used if we want to know if the specific director
 
 In this example I searched the word "Columbus" please note this is case sensitve. As we can see we can't grab or display that there's a word Columbus contain in this file. Hence, it return nothing.
 
-## grep -v "string" directory :
+## grep -i "string" directory :
 <img width="696" alt="Screen Shot 2023-02-12 at 9 52 05 PM" src="https://user-images.githubusercontent.com/82022298/218381134-76b56a9d-9e0b-4ac3-8ef2-2cc3f506c8f9.png">
 
 What does -i do? Ignores, case for matching. So, above I tried to search word "this" in the text file. But, in the code instead of "this" I wrote "This", the command -i makes it ignore the case sensitive and just search for the desire word and display the text with the desire word displayed in red. 
