@@ -34,15 +34,21 @@ We wanted to run the test again by running the javac and the java. So we can do 
 
 After that we wanted to do git push and commit. `Git push` is to upload local repository content to a remote repository, and `git commit -m "Updated"` is record changes to the repository. So, we do git push first after that press `<up>` and delete the push change to `commit -m "Updated"` meaning we want the new file to be updated. Final step is to do `git push origin main` to update on my github too. 
 
+
 ## All the step from the lab
-### Generating SSH Keys for ieng6
+### Generating SSH Keys for ieng6 
 1. In your local terminal, run ssh-keygen
 2. Keep entering <Enter> until the program shows some text it calles the “randomart image”.
   <img width="896" alt="Screenshot 2023-02-26 at 9 41 38 PM" src="https://user-images.githubusercontent.com/82022298/221501111-49845fe9-23cd-45da-bb7c-7b404dd22d8b.png">
 3. Scroll up a bit to where you were creating the SSH key, find the line where it says: Your public key has been saved in: <path to your public SSH key>, copy the path. Make sure you get the public key file, ending in .pub, here, not the private file.
 4. From your local computer, run scp <path to your public SSH key> cs15lwi23__@ieng6.ucsd.edu:~/.ssh/authorized_keys
-
-
+  
+### Generating SSH Keys for Github
+1. In your local terminal, run ssh-keygen
+2. Display the SSH public key generated above to your clipboard using cat like below; you can copy it by highlighting and right-clicking
+cat <path of your ssh key .pub file>
+3. In the “Access” section of the sidebar, click SSH and GPG keys.
+4. Click New SSH key or Add SSH key under the “SSH keys” section.
 ---
 ## Name : Michelle Tian
 ## PID : A17183450
