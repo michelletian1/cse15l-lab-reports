@@ -4,13 +4,13 @@
 ## Connecting to remote server
 <img width="828" alt="Screen Shot 2023-02-25 at 9 07 05 PM" src="https://user-images.githubusercontent.com/82022298/221484420-1559cfa8-2bea-4ab1-8a39-a1bbb8fe2948.png">
 
-Here I access my ssh `cs15lwi23abb@ieng6.ucsd.edu` remote server. I don't have to enter key anymore because I have generate ssh keys for ieng6 by using ssh-keygen and then running scp `<our public key>` from ssh-keygen. After you finish setting that up exit and run it again. Here, keys pressed :`<up><up>` to get ssh command line. 
+Here I access my ssh `cs15lwi23abb@ieng6.ucsd.edu` remote server. I don't have to enter key anymore because I have generate ssh keys for ieng6 by using ssh-keygen and then running scp `<our public key>` from ssh-keygen. After you finish setting that up exit and run it again. Here, keys pressed :`<up><up>` to get ssh command line and then `<enter>`
 
 
 ## Clone your fork of the repository from your Github account
 <img width="693" alt="Screen Shot 2023-02-25 at 9 07 38 PM" src="https://user-images.githubusercontent.com/82022298/221492925-fb58f037-7b7e-4366-98b5-a6ae4d3906dd.png">
 
-So here I didn't do any key pressing as I needed to write the `git clone`. I clone the github using the github ssh by setting up ssh keys for Github. First, same thing with the first step, ssh-keygen and then we use cat to show full ssh keys. Then we copy it from the terminal to our github ssh and keys sections on the github. After we set that up we do `git clone git@github.com:michelletian1/lab7.git` it will clone the folder to our remoter server.
+So here I didn't do any key pressing as I needed to write the `git clone`. I clone the github using the github ssh by setting up ssh keys for Github. First, same thing with the first step, ssh-keygen and then we use cat to show full ssh keys. Then we copy it from the terminal to our github ssh and keys sections on the github. After we set that up we do `git clone git@github.com:michelletian1/lab7.git` it will clone the folder to our remoter server. Key pressed `<enter>`
 
 ## Run the tests, demonstrating that they fail:
 <img width="870" alt="Screen Shot 2023-02-26 at 12 03 47 AM" src="https://user-images.githubusercontent.com/82022298/221495056-69334911-8800-46dc-9cb6-c00dc29ec018.png">
