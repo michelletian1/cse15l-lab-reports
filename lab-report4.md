@@ -27,29 +27,21 @@ We can fix the mistake with 2 options doing nano and doing git push and commit. 
 ## Run the tests, demonstrating that they now succeed:
 <img width="1145" alt="Screenshot 2023-02-26 at 9 39 01 PM" src="https://user-images.githubusercontent.com/82022298/221498275-72fced99-436a-4e9a-86b9-1bb137bc2336.png">
 
-We wanted to run the test again
+We wanted to run the test again by running the javac and the java. So we can do key pressed for javac, such as `<up><up><up><enter>` and for java `<up><up><up><up><enter>` and I will give the results as the picture okay for all running. 
 
-## grep "string" file :
-<img width="1044" alt="Screen Shot 2023-02-10 at 3 04 43 PM" src="https://user-images.githubusercontent.com/82022298/218288000-7955c1bc-c547-45ef-b2e6-54b3e5c00849.png">
+## Commit and push the resulting change to your Github account  :
+<img width="839" alt="Screenshot 2023-02-26 at 9 40 12 PM" src="https://user-images.githubusercontent.com/82022298/221499555-3abba41a-f0cd-4772-97c5-0f90345a428b.png">
 
-`grep "string" file` usually used if we want to know if the specific directory contains the word that we wanted or not. As we can see I put the word "insanity" as the word that I wanted to search in the file directory. Then I specify the diretory showing that the txt files do contain the word we are looking for.
+After that we wanted to do git push and commit. `Git push` is to upload local repository content to a remote repository, and `git commit -m "Updated"` is record changes to the repository. So, we do git push first after that press `<up>` and delete the push change to `commit -m "Updated"` meaning we want the new file to be updated. Final step is to do `git push origin main` to update on my github too. 
 
-### Example 2 
-<img width="629" alt="Screen Shot 2023-02-12 at 8 42 54 PM" src="https://user-images.githubusercontent.com/82022298/218372385-0b69783b-5c54-41ed-bf85-4471c097ab71.png">
+## All the step from the lab
+### Generating SSH Keys for ieng6
+1. In your local terminal, run ssh-keygen
+2. Keep entering <Enter> until the program shows some text it calles the “randomart image”.
+  <img width="896" alt="Screenshot 2023-02-26 at 9 41 38 PM" src="https://user-images.githubusercontent.com/82022298/221501111-49845fe9-23cd-45da-bb7c-7b404dd22d8b.png">
+3. Scroll up a bit to where you were creating the SSH key, find the line where it says: Your public key has been saved in: <path to your public SSH key>, copy the path. Make sure you get the public key file, ending in .pub, here, not the private file.
+4. From your local computer, run scp <path to your public SSH key> cs15lwi23__@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
-In this example I searched the word "Columbus" please note this is case sensitve. As we can see we can't grab or display that there's a word Columbus contain in this file. Hence, it return nothing.
-
-## grep -i "string" file :
-<img width="696" alt="Screen Shot 2023-02-12 at 9 52 05 PM" src="https://user-images.githubusercontent.com/82022298/218381134-76b56a9d-9e0b-4ac3-8ef2-2cc3f506c8f9.png">
-
-What does `-i` do? Ignores, case for matching. So, above I tried to search word "this" in the text file. But, in the code instead of "this" I wrote "This", the command -i makes it ignore the case sensitive and just search for the desire word and display the text with the desire word displayed in red. 
-
-### Example 2
-<img width="664" alt="Screen Shot 2023-02-12 at 9 57 32 PM" src="https://user-images.githubusercontent.com/82022298/218381923-84bd77ca-523f-4dc4-b75b-7bb4f46579a2.png">
-
-<img width="654" alt="Screen Shot 2023-02-12 at 9 57 38 PM" src="https://user-images.githubusercontent.com/82022298/218381960-3ce9b434-9b91-41e3-a211-3ed8a424964f.png">
-
-So, the in the command I used `grep -r -i "Language" written_2/` meaning that I want to grep every single file text in the directory. And then I want to ignore the capital letter or case sensitive for the language. Hence, it will search the word "Language" in every single file in the written_2/ as you can see I provided two screenshots where one you can match the word "Language" even though it is lower case and second "Language" with upper case. 
 
 ---
 ## Name : Michelle Tian
