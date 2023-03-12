@@ -3,54 +3,44 @@
 
 ## The grading script
 
-We first fork the Github repository called 
+We first fork the Github repository called (https://github.com/ucsd-cse15l-w23/list-examples-grader)
+
 This is the originial file without any additional grading command :
-<img width="1149" alt="Screenshot 2023-03-12 at 1 09 17 PM" src="https://user-images.githubusercontent.com/82022298/224570629-871769cb-e39d-4582-bea7-2c81146fe1e1.png">
+<img width="1149" alt="Screenshot 2023-03-12 at 1 09 17 PM" src="https://user-images.githubusercontent.com/82022298/224570629-871769cb-e39d-4582-bea7-2c81146fe1e1.png"> 
 
-We want to show that if the we can find first we can find the ListExamples.java first using echo because every grading script will be contain insde the ListExamples.java. 
+We want to display if we can find the ListExamples.java file using echo because every grading script will be contain insde the ListExamples.java. Then If we are able to find the file, we will continue with the grading process. We have learned in lab6 to construct the grading script that includes if condition where the parameters is -e (enables the interpretation of the following backslash escapes). I also incorporate tail functions that will be useful printing the last N number of data of the given input. Below I will provided the second edition of the grading script before finalizing
 
-## Clone your fork of the repository from your Github account
-<img width="693" alt="Screen Shot 2023-02-25 at 9 07 38 PM" src="https://user-images.githubusercontent.com/82022298/221492925-fb58f037-7b7e-4366-98b5-a6ae4d3906dd.png">
+### Second edtion :
+<img width="1133" alt="Screenshot 2023-03-12 at 1 26 08 PM" src="https://user-images.githubusercontent.com/82022298/224572209-63765202-2406-432b-a3fc-d619bbcb9cab.png">
 
-So here I didn't do any key pressing as I needed to write the `git clone`. I clone the github using the github ssh by setting up ssh keys for Github. First, same thing with the first step, ssh-keygen and then we use cat to show full ssh keys. Then we copy it from the terminal to our github ssh and keys sections on the github. After we set that up we do `git clone git@github.com:michelletian1/lab7.git` it will clone the folder to our remoter server. Key pressed `<enter>`
+The pictures presents all of the command I have mentioned above, all though the code is running it is not quite right as I haven't wrote the part where we can count the mistakes and overall grades for the Files we're about to grade. In lab 8, I have discovered how to write the grading script by discussing with my teammates. In the picture below is the finalized versions of grading script.
 
-## Run the tests, demonstrating that they fail:
-<img width="870" alt="Screen Shot 2023-02-26 at 12 03 47 AM" src="https://user-images.githubusercontent.com/82022298/221495056-69334911-8800-46dc-9cb6-c00dc29ec018.png">
-<img width="1210" alt="Screen Shot 2023-02-26 at 12 07 28 AM" src="https://user-images.githubusercontent.com/82022298/221495070-e580aef7-7c34-4983-aa63-c507971883c6.png">
+### Third edition :
+<img width="934" alt="Screenshot 2023-03-12 at 1 15 20 PM" src="https://user-images.githubusercontent.com/82022298/224572415-cea5bef7-8ee3-41f8-922f-b53e34374a9f.png">
+<img width="1117" alt="Screenshot 2023-03-12 at 1 44 03 PM" src="https://user-images.githubusercontent.com/82022298/224572539-d2a85159-6cef-4584-a97b-cfe322e7287b.png">
 
-In this step, I first cd to lab7 first then I pressed `<up>` key because I already wrote it so there exist a history to get the first javac running and then I pressed another `<up>` key because I wanted to change the back of the code while have the front the same except the javac to java and then I pressed `<enter>`.
+As it can be observed above, first I searched the file of ListExamples.java from the github repo that the professor gave. If we are able to find the file, we proceed with grading. Second, I want to clone my code to the students' directory because I want to be able to search up which part they got wrong and right. After we can detect the errors we can produced an output, which is the student's score. 
 
-## Edit the code file to fix the failing test: 
-<img width="589" alt="Screenshot 2023-02-26 at 9 37 48 PM" src="https://user-images.githubusercontent.com/82022298/221496590-006bc13b-199b-4898-b6f2-4bd8c8f47706.png">
-<img width="1248" alt="Screenshot 2023-02-26 at 9 37 57 PM" src="https://user-images.githubusercontent.com/82022298/221496606-c0a9a15f-ce87-4fef-8d57-a74a7fcfcfcf.png">
+## Running some Grading:
 
-We can fix the mistake with 2 options doing nano and doing git push and commit. In this case, doing nano is much more simpler than doing so many git push and commit within the file. We first have to find the mistake and in which file. I already know the mistake, it is in the file of ListExamples.java. To fix it I simply do `nano ListExamples.java` after that I scroll down to find the mistake that I wanted to fix. With second image provided I fixed the last while loop, changing from `index1 += 1 to index2 += 1` after that pressed `control + o` to save the changes and then `control + x` to exit.
+If we want to run the grading script we can first open the github repo that contain the ListExamples.java then we copy the URL of the github repo. In our terminal we can start by writing `bash grade.sh (GITHUB REPO URL)` 
 
-## Run the tests, demonstrating that they now succeed:
-<img width="1145" alt="Screenshot 2023-02-26 at 9 39 01 PM" src="https://user-images.githubusercontent.com/82022298/221498275-72fced99-436a-4e9a-86b9-1bb137bc2336.png">
+### lab-methods-lab3
+<img width="1053" alt="Screenshot 2023-03-12 at 1 56 08 PM" src="https://user-images.githubusercontent.com/82022298/224573166-69f26daf-a3a1-4397-a8ec-d72324f8a0ef.png">
+<img width="650" alt="Screenshot 2023-03-12 at 1 56 13 PM" src="https://user-images.githubusercontent.com/82022298/224573175-59570fbd-4c31-48a2-b4d8-ab93aabcb988.png">
 
-We wanted to run the test again by running the javac and the java. So we can do key pressed for javac, such as `<up><up><up><enter>` and for java `<up><up><up><up><enter>` and I will give the results as the picture okay for all running. 
+On the grading above, I first implement the `bash grade.sh(https://github.com/ucsd-cse15l-f22/list-methods-lab3)`. Then it will automatically run itself to count the grades. 
 
-## Commit and push the resulting change to your Github account  :
-<img width="839" alt="Screenshot 2023-02-26 at 9 40 12 PM" src="https://user-images.githubusercontent.com/82022298/221499555-3abba41a-f0cd-4772-97c5-0f90345a428b.png">
+### list-methods-compile-error
+<img width="1105" alt="Screenshot 2023-03-12 at 2 00 28 PM" src="https://user-images.githubusercontent.com/82022298/224573406-55dea1f1-fa6c-41ac-ab83-398c69e7607b.png">
 
-After that we wanted to do git push and commit. `Git push` is to upload local repository content to a remote repository, and `git commit -m "Updated"` is record changes to the repository. So, we do git push first after that press `<up>` and delete the push change to `commit -m "Updated"` meaning we want the new file to be updated. Final step is to do `git push origin main` to update on my github too. 
+The final score is 0/2
 
+### list-methods-corrected
+<img width="1086" alt="Screenshot 2023-03-12 at 2 04 22 PM" src="https://user-images.githubusercontent.com/82022298/224573635-c8c347ff-7a7a-4b43-a5e5-9938b6903ab9.png">
 
-## All the step from the lab
-### Generating SSH Keys for ieng6 
-1. In your local terminal, run ssh-keygen
-2. Keep entering <Enter> until the program shows some text it calles the “randomart image”.
-  <img width="896" alt="Screenshot 2023-02-26 at 9 41 38 PM" src="https://user-images.githubusercontent.com/82022298/221501111-49845fe9-23cd-45da-bb7c-7b404dd22d8b.png">
-3. Scroll up a bit to where you were creating the SSH key, find the line where it says: Your public key has been saved in: <path to your public SSH key>, copy the path. Make sure you get the public key file, ending in .pub, here, not the private file.
-4. From your local computer, run scp <path to your public SSH key> cs15lwi23__@ieng6.ucsd.edu:~/.ssh/authorized_keys
-  
-### Generating SSH Keys for Github
-1. In your local terminal, run ssh-keygen
-2. Display the SSH public key generated above to your clipboard using cat like below; you can copy it by highlighting and right-clicking
-cat <path of your ssh key .pub file>
-3. In the “Access” section of the sidebar, click SSH and GPG keys.
-4. Click New SSH key or Add SSH key under the “SSH keys” section.
+Here we can see the final score is 2/2 
+
 ---
 ## Name : Michelle Tian
 ## PID : A17183450
