@@ -1,11 +1,13 @@
 #Lab Report 5
 ---
 
-## Connecting to remote server
-<img width="828" alt="Screen Shot 2023-02-25 at 9 07 05 PM" src="https://user-images.githubusercontent.com/82022298/221484420-1559cfa8-2bea-4ab1-8a39-a1bbb8fe2948.png">
+## The grading script
 
-Here I access my ssh `cs15lwi23abb@ieng6.ucsd.edu` remote server. I don't have to enter key anymore because I have generate ssh keys for ieng6 by using ssh-keygen and then running scp `<our public key>` from ssh-keygen. After you finish setting that up exit and run it again. Here, keys pressed :`<up><up>` to get ssh command line and then `<enter>`
+We first fork the Github repository called 
+This is the originial file without any additional grading command :
+<img width="1149" alt="Screenshot 2023-03-12 at 1 09 17 PM" src="https://user-images.githubusercontent.com/82022298/224570629-871769cb-e39d-4582-bea7-2c81146fe1e1.png">
 
+We want to show that if the we can find first we can find the ListExamples.java first using echo because every grading script will be contain insde the ListExamples.java. 
 
 ## Clone your fork of the repository from your Github account
 <img width="693" alt="Screen Shot 2023-02-25 at 9 07 38 PM" src="https://user-images.githubusercontent.com/82022298/221492925-fb58f037-7b7e-4366-98b5-a6ae4d3906dd.png">
