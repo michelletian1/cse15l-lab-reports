@@ -8,7 +8,7 @@ We first fork the Github repository called (https://github.com/ucsd-cse15l-w23/l
 This is the originial file without any additional grading command :
 <img width="1149" alt="Screenshot 2023-03-12 at 1 09 17 PM" src="https://user-images.githubusercontent.com/82022298/224570629-871769cb-e39d-4582-bea7-2c81146fe1e1.png"> 
 
-We want to display if we can find the ListExamples.java file using echo because every grading script will be contain insde the ListExamples.java. Then If we are able to find the file, we will continue with the grading process. We have learned in lab6 to construct the grading script that includes if condition where the parameters is -e (enables the interpretation of the following backslash escapes). I also incorporate tail functions that will be useful printing the last N number of data of the given input. Below I will provided the second edition of the grading script before finalizing
+We want to display if we can find the ListExamples.java file using echo because every grading script will be contain insde the ListExamples.java. Then If we are able to find the file, we will continue with the grading process. We have learned in lab6 to construct the grading script that includes if condition where the parameters is `-e` (enables the interpretation of the following backslash escapes). I also incorporate `tail` functions that will be useful printing the last N number of data of the given input. Below I will provided the second edition of the grading script before finalizing
 
 ### Second edtion :
 <img width="1133" alt="Screenshot 2023-03-12 at 1 26 08 PM" src="https://user-images.githubusercontent.com/82022298/224572209-63765202-2406-432b-a3fc-d619bbcb9cab.png">
